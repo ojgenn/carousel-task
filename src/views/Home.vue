@@ -57,7 +57,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .v-text-field__slot {
+  .v-text-field {
     width: 30vw;
   }
 </style>
