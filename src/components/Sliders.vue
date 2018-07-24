@@ -1,10 +1,12 @@
 <template>
-  <carousel-3d :display='num' border='0'>
+  <carousel-3d :display='num' border='0' :controls-visible="true">
     <slide v-for="(slide, i) in img" :index="i" :key="i">
       <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
-        <img :data-index="index"
+        <a :href="slide.img" target="_blank">
+          <img :data-index="index"
              :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }"
              :src="slide.img">
+        </a>
       </template>
     </slide>
   </carousel-3d>
