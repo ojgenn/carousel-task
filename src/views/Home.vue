@@ -24,8 +24,6 @@
   import Sliders from '../components/Sliders'
   import Urls from '../assets/Urls'
 
-  const unsplashUrl = 'https://api.unsplash.com/photos/?client_id=207516def8772fd9bb8659348cf256a09674965e30fdf49ac376e4efc5cb2d69';
-
   export default {
     data() {
       return {
@@ -43,7 +41,6 @@
       Sliders
     },
     created: function () {
-      console.log(Urls)
       this.imageArr = Urls
     },
     mounted() {

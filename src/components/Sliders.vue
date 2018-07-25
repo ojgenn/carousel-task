@@ -1,10 +1,14 @@
 <template>
-  <carousel-3d :display='num' border='0' :controls-visible="true">
+  <carousel-3d :display='num' border='0' :controls-visible="true" dir = "ltr">
     <slide v-for="(slide, i) in img" :index="i" :key="slide.id">
-        <a :href="slide.img" target="_blank">
-          <img :data-index="slide.id"
-             :src="slide.img">
-        </a>
+        <figure>
+          <img :src="slide.img">
+          <figcaption>
+            <a :href="slide.img" target="_blank">
+              Перейти к источнику
+            </a>
+          </figcaption>
+        </figure>
     </slide>
   </carousel-3d>
 </template>
@@ -32,4 +36,10 @@
     justify-content: center;
     align-items: center
   }
+  figcaption a {
+    height: 69px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  } 
 </style>
